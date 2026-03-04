@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_bg"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Quick Controls"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#1a1a2e"
+            android:gravity="center"
+            android:paddingBottom="16dp" />
+
+        <!-- POWER SECTION -->
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="POWER" android:textSize="11sp" android:textColor="#888888"
+            android:paddingBottom="8dp" />
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:weightSum="3" android:layout_marginBottom="16dp">
+
+            <LinearLayout android:id="@+id/btnAirplane"
+                android:layout_width="0dp" android:layout_height="72dp" android:layout_weight="1"
+                android:layout_marginEnd="6dp" android:orientation="vertical" android:gravity="center"
+                android:background="@drawable/power_btn_bg" android:clickable="true" android:focusable="true">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="&#9992;" android:textSize="24sp" android:textColor="#555" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Airplane" android:textSize="10sp" android:textColor="#555" />
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/btnReboot"
+                android:layout_width="0dp" android:layout_height="72dp" android:layout_weight="1"
+                android:layout_marginEnd="6dp" android:orientation="vertical" android:gravity="center"
+                android:background="@drawable/power_btn_bg" android:clickable="true" android:focusable="true">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="&#8635;" android:textSize="24sp" android:textColor="#555" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Reboot" android:textSize="10sp" android:textColor="#555" />
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/btnShutdown"
+                android:layout_width="0dp" android:layout_height="72dp" android:layout_weight="1"
+                android:orientation="vertical" android:gravity="center"
+                android:background="@drawable/power_btn_shutdown_bg" android:clickable="true" android:focusable="true">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="&#9211;" android:textSize="24sp" android:textColor="#c0392b" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Shutdown" android:textSize="10sp" android:textColor="#c0392b" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View android:layout_width="match_parent" android:layout_height="1dp"
+            android:background="#e0e0e0" android:layout_marginBottom="14dp" />
+
+        <!-- RINGER MODE -->
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="RINGER MODE" android:textSize="11sp" android:textColor="#888888"
+            android:paddingBottom="8dp" />
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:weightSum="4" android:layout_marginBottom="16dp">
+
+            <LinearLayout android:id="@+id/btnRinging"
+                android:layout_width="0dp" android:layout_height="64dp" android:layout_weight="1"
+                android:layout_marginEnd="4dp" android:orientation="vertical" android:gravity="center"
+                android:background="@drawable/mode_btn_normal" android:clickable="true" android:focusable="true">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="&#128276;" android:textSize="18sp" />
+                <TextView android:id="@+id/tvRingLabel" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="Ring" android:textSize="10sp" android:textColor="#444" />
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/btnVibration"
+                android:layout_width="0dp" android:layout_height="64dp" android:layout_weight="1"
+                android:layout_marginEnd="4dp" android:orientation="vertical" android:gravity="center"
+                android:background="@drawable/mode_btn_normal" android:clickable="true" android:focusable="true">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="&#128243;" android:textSize="18sp" />
+                <TextView android:id="@+id/tvVibLabel" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="Vibrate" android:textSize="10sp" android:textColor="#444" />
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/btnSilent"
+                android:layout_width="0dp" android:layout_height="64dp" android:layout_weight="1"
+                android:layout_marginEnd="4dp" android:orientation="vertical" android:gravity="center"
+                android:background="@drawable/mode_btn_normal" android:clickable="true" android:focusable="true">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="&#128277;" android:textSize="18sp" />
+                <TextView android:id="@+id/tvSilentLabel" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="Silent" android:textSize="10sp" android:textColor="#444" />
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/btnDND"
+                android:layout_width="0dp" android:layout_height="64dp" android:layout_weight="1"
+                android:orientation="vertical" android:gravity="center"
+                android:background="@drawable/mode_btn_normal" android:clickable="true" android:focusable="true">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="&#127769;" android:textSize="18sp" />
+                <TextView android:id="@+id/tvDNDLabel" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="DND" android:textSize="10sp" android:textColor="#444" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View android:layout_width="match_parent" android:layout_height="1dp"
+            android:background="#e0e0e0" android:layout_marginBottom="14dp" />
+
+        <!-- VOLUME SLIDERS -->
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="VOLUME" android:textSize="11sp" android:textColor="#888888" android:paddingBottom="10dp" />
+
+        <!-- Ringer Slider -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginBottom="14dp" android:gravity="center_vertical">
+            <TextView android:layout_width="28dp" android:layout_height="wrap_content"
+                android:text="&#128276;" android:textSize="18sp" />
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="8dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="Ringer" android:textSize="12sp" android:textColor="#333" android:textStyle="bold" />
+                <SeekBar android:id="@+id/seekRinger" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:progressTint="#6c5ce7" android:thumbTint="#6c5ce7" />
+            </LinearLayout>
+            <TextView android:id="@+id/tvRingerVal" android:layout_width="36dp"
+                android:layout_height="wrap_content" android:textSize="11sp"
+                android:textColor="#666" android:gravity="end" android:layout_marginStart="4dp" />
+        </LinearLayout>
+
+        <!-- Notification Slider -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginBottom="14dp" android:gravity="center_vertical">
+            <TextView android:layout_width="28dp" android:layout_height="wrap_content"
+                android:text="&#128276;" android:textSize="18sp" />
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="8dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="Notification" android:textSize="12sp" android:textColor="#333" android:textStyle="bold" />
+                <SeekBar android:id="@+id/seekNotification" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:progressTint="#6c5ce7" android:thumbTint="#6c5ce7" />
+            </LinearLayout>
+            <TextView android:id="@+id/tvNotifVal" android:layout_width="36dp"
+                android:layout_height="wrap_content" android:textSize="11sp"
+                android:textColor="#666" android:gravity="end" android:layout_marginStart="4dp" />
+        </LinearLayout>
+
+        <!-- Media Slider -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginBottom="14dp" android:gravity="center_vertical">
+            <TextView android:layout_width="28dp" android:layout_height="wrap_content"
+                android:text="&#127925;" android:textSize="18sp" />
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="8dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="Media" android:textSize="12sp" android:textColor="#333" android:textStyle="bold" />
+                <SeekBar android:id="@+id/seekMedia" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:progressTint="#6c5ce7" android:thumbTint="#6c5ce7" />
+            </LinearLayout>
+            <TextView android:id="@+id/tvMediaVal" android:layout_width="36dp"
+                android:layout_height="wrap_content" android:textSize="11sp"
+                android:textColor="#666" android:gravity="end" android:layout_marginStart="4dp" />
+        </LinearLayout>
+
+        <!-- Alarm Slider -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginBottom="14dp" android:gravity="center_vertical">
+            <TextView android:layout_width="28dp" android:layout_height="wrap_content"
+                android:text="&#9200;" android:textSize="18sp" />
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="8dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="Alarm" android:textSize="12sp" android:textColor="#333" android:textStyle="bold" />
+                <SeekBar android:id="@+id/seekAlarm" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:progressTint="#6c5ce7" android:thumbTint="#6c5ce7" />
+            </LinearLayout>
+            <TextView android:id="@+id/tvAlarmVal" android:layout_width="36dp"
+                android:layout_height="wrap_content" android:textSize="11sp"
+                android:textColor="#666" android:gravity="end" android:layout_marginStart="4dp" />
+        </LinearLayout>
+
+        <!-- In-Call Slider -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginBottom="14dp" android:gravity="center_vertical">
+            <TextView android:layout_width="28dp" android:layout_height="wrap_content"
+                android:text="&#128222;" android:textSize="18sp" />
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="8dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="In-Call" android:textSize="12sp" android:textColor="#333" android:textStyle="bold" />
+                <SeekBar android:id="@+id/seekCall" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:progressTint="#6c5ce7" android:thumbTint="#6c5ce7" />
+            </LinearLayout>
+            <TextView android:id="@+id/tvCallVal" android:layout_width="36dp"
+                android:layout_height="wrap_content" android:textSize="11sp"
+                android:textColor="#666" android:gravity="end" android:layout_marginStart="4dp" />
+        </LinearLayout>
+
+        <!-- System Slider -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginBottom="6dp" android:gravity="center_vertical">
+            <TextView android:layout_width="28dp" android:layout_height="wrap_content"
+                android:text="&#128241;" android:textSize="18sp" />
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="8dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="System" android:textSize="12sp" android:textColor="#333" android:textStyle="bold" />
+                <SeekBar android:id="@+id/seekSystem" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:progressTint="#6c5ce7" android:thumbTint="#6c5ce7" />
+            </LinearLayout>
+            <TextView android:id="@+id/tvSystemVal" android:layout_width="36dp"
+                android:layout_height="wrap_content" android:textSize="11sp"
+                android:textColor="#666" android:gravity="end" android:layout_marginStart="4dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
